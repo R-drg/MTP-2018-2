@@ -1,4 +1,6 @@
-//Rodrigo Henrique Alves Ferreira - 11811EPC001
+/* P1.c */
+/* Rodrigo Henrique Alves Ferreira */
+/* 11811ECP001 */
 
 #include <stdio.h>
 
