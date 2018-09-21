@@ -1,4 +1,12 @@
+/* P0.c */
+/* Rodrigo Henrique Alves Ferreira */
+/* 11811ECP001 */
+
 #include <stdio.h>
+
+char bin_hex(char bits[]){
+
+}
 
 int bin_dec(char bits[]){
   int i,j=-1,res=0;
@@ -32,7 +40,10 @@ switch (opt) {
     printf("\nResultado do numero em decimal: %i \n\n",bin_dec(bits));
     getchar();
     break;
-
+  case 2:
+    printf("\n\nDigite o numero binario a se convertido: ");
+    scanf("%s%*c",bits);
+    printf("\nResultado do numero em Hexadecimal: %s",bin_hex(bits));
 
 }
 }
