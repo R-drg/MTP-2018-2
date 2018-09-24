@@ -1,6 +1,8 @@
-/* P0.c */
+
+/* P1.c */
 /* Rodrigo Henrique Alves Ferreira */
 /* 11811ECP001 */
+
 #include <stdio.h>
 
 int main(){
