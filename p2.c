@@ -1,16 +1,13 @@
-/* P0.c */
+/* P2.c */
 /* Rodrigo Henrique Alves Ferreira */
 /* 11811ECP001 */
-
 #include <stdio.h>
 
-char bin_hex(char bits[]){
-
-}
 
 int bin_dec(char bits[]){
   int i,j=-1,res=0;
-  for(i=0;bits[i]!='\0';i++){
+  for(i=0;bits[i]!='\0';i++)
+  {
   }
 
   while(i>=0){
@@ -23,9 +20,31 @@ int bin_dec(char bits[]){
   return res;
 }
 
+void bin_hex(char bits[]){
+  printf("%X",(bin_dec(bits)));
+  }
+
+
+
+void dec_bin(int num){
+  int res[256],resto=1;
+  int j=0,i=0,numAux=num;
+  while(resto>1){
+    res[i]=numAux/2;
+    i++;
+    numAux=numAux/2;
+    resto=numAux%2;
+    printf("%i",resto);
+  }
+  res[i]=numAux%2;
+  while(i<=0){
+    printf("%i",res[j]);
+    i--;
+  }
+  }
 
 int main(){
-int opt,res;
+int opt,res,num;
 char bits[256];
 
 while(opt!=9){
@@ -41,9 +60,20 @@ switch (opt) {
     getchar();
     break;
   case 2:
-    printf("\n\nDigite o numero binario a se convertido: ");
+  //Fazer Função
+    printf("\n\nDigite o numero binario a ser convertido: ");
     scanf("%s%*c",bits);
-    printf("\nResultado do numero em Hexadecimal: %s",bin_hex(bits));
+    printf("\nResultado do numero em Hexadecimal: ");
+    bin_hex(bits);
+    printf("\n\n");
+    getchar();
+    break;
+  case 5:
+    printf("\n\nDigite o numero decimal a ser convertido: ");
+    scanf("%i",&num);
+    printf("\nResultado do numero em Binario: ");
+    dec_bin(num);
+    printf("\n\n");
 
 }
 }
