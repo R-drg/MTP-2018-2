@@ -1,3 +1,8 @@
+ 
+/* P6.c */
+/* Rodrigo Henrique Alves Ferreira*/
+/* 11811ECP001 */
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
