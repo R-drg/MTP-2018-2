@@ -49,24 +49,30 @@ double lcg_rand_01(LCG * r){
   return ((double) lcg_rand(r))/(r->rand_max);
 }
 
-void gera_numeros(float * vetor, int tam, float min, float max, LCG * r){
+void generate(float * v, int tam, float min, float max, LCG * r){
   int i;
   for(i = 0; i < tam; i++)
-    vetor[i] = (max-min) * lcg_rand_01(r) + min;
+    v[i] = (max-min) * lcg_rand_01(r) + min;
 }
 
 int main(){
-  int escolha = 0;
-  float vetor[50], result = 0;
-  LCG random;
-  semente(&random, 123456);
-  gera_numeros(vetor, 50, 0.5, 1.5, &random);
+  int opt = 0;
+  float v[50], result = 0;
+  LCG rand;
+  semente(&rand, 123456);
+  generate(v, 50, 0.5, 1.5, &rand);
   printf("1-Somatorio\n\n2-Produtorio\n\n");
-  scanf("%d", &escolha); getchar();
-  if(escolha == 1){
-    printf("\n%f", soma(vetor, 49, result));
+  scanf("%d", &opt); getchar();
+  while(opt!= 1 || opt!=2){
+  if(opt == 1){
+    printf("\n%f", soma(v, 49, result));
   }
-  else
-    printf("\n%f", produto(vetor, 49, result));
+  if(opt == 2){
+    printf("\n%f", produto(v, 49, result));
+  }
+  else{
+    printf("Opcao invalida");
+  }
+}
   getchar();
 }
