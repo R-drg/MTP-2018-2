@@ -1,4 +1,4 @@
- 
+
 /* P6.c */
 /* Rodrigo Henrique Alves Ferreira*/
 /* 11811ECP001 */
@@ -22,7 +22,7 @@ Ponto * dividecirc(int N){
 
 void mostra_pontos(Ponto * p_ini, Ponto * p_fim){
 	if(p_ini < p_fim){
-		printf("(%.3lf,%.3lf) ",p_ini->x,p_ini->y);	
+		printf("(%.3lf,%.3lf) ",p_ini->x,p_ini->y);
 	mostra_pontos(p_ini+1,p_fim);
 	}
 }
